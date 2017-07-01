@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>API Reference: Timestamp Microservice</title>
+  
+  
+  <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+      <link rel="stylesheet" href="/css/style.css">
+
+  
+</head>
+
+<body>
+  <body>
+  <h1> <u> API Reference: Timestamp  </u> </h1>
+  <p> Timestamp microservice - used for translating to and from natural language to unix formats. <br> Must pass a string of either 
+    <ul> 
+      <li> a UNIX timestamp (e.g 15333235 or - 5123304) </li>
+      <li> a Natural Language date (e.g October 22, 2011) </li>
+    </ul>
+  </p>
+
+
+  <table>
+    <tr> 
+      <th> Example Call </th>
+      <th> Example Result </th>
+    </tr>
+    <tr>
+      <td> <code> https://sour-kilometer.glitch.me/December%2015,%202015 </code> </td>
+      <td> <code> {"unix":1450137600,"natural":"December 15, 2015"} </code> </td>
+    </tr>
+    <tr>
+      <td> <code> https://sour-kilometer.glitch.me/1352221111 </code> </td>
+      <td> <code> {"unix": 1352221111,"natural": "November 6, 2012"} </code> </td>
+    </tr>
+    <tr>
+      <td> <code> https://sour-kilometer.glitch.me/March1240April341September </code> </td>
+      <td> <code> {"unix": null,"natural": null} </code>  </td>
+    </tr>
+    <tr>
+      <td> <code> https://sour-kilometer.glitch.me/colour=red </code> </td>
+      <td> <code> {"unix": null,"natural": null} </code>  </td>
+    </tr>
+  </table>
+  
+
+
+</body>
+  
+  
+</body>
+</html>
